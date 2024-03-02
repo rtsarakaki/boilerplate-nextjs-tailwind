@@ -1,0 +1,55 @@
+{
+	// Place your workplace-app workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"React Component Test": {
+		"prefix": "_test",
+		"body": [
+			"import React from \"react\";",
+			"import \"@testing-library/jest-dom\";",
+			"import {render, screen} from \"@testing-library/react\";",
+			"\n",
+			"import $1 from \".\";",
+			"\n",
+			"describe('<$1 />', () => {",
+			"    it('should not throw any JavaScript errors', () => {",
+			"        render(<$1 />);",
+			"        const consoleSpy = jest.spyOn(console, 'error');",
+			"\n",
+			"        expect(consoleSpy).not.toHaveBeenCalled();",
+			"\n",
+			"        consoleSpy.mockRestore();",
+			"    });",
+			"});"
+		],
+		"description": "Creates a basic React component test with jest and testing-library"
+	},
+	"React Functional Component": {
+		"prefix": "_init-component",
+		"body": [
+			"export default function $1() {",
+			"    return (",
+			"        <>",
+			"            <div className=\"\">",
+			"                <h1>$1</h1>",
+			"            </div>",
+			"        </>",
+			"    );",
+			"}"
+		],
+		"description": "Creates a basic React functional component"
+	}
+}
