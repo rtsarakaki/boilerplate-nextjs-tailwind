@@ -12,6 +12,11 @@
 		"clean": "find . -name 'node_modules' -type d -exec rm -rf {} + && rm yarn.lock &&yarn cache clean && yarn install"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.5.1",
+		"@fortawesome/free-brands-svg-icons": "^6.5.1",
+		"@fortawesome/free-regular-svg-icons": "^6.5.1",
+		"@fortawesome/free-solid-svg-icons": "^6.5.1",
+		"@fortawesome/react-fontawesome": "^0.2.0",
 		"next": "13.4.10",
 		"react": "^18",
 		"react-dom": "^18"
